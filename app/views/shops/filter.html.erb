@@ -1,29 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Shops</h1>
-
-<form action="/filter_shops" method="GET">
-  <h2>Shops in X radius</h2>
-  <label>Latitude</label>
-  <input type="text" name="latitude"><br>
-  <label>Longitude</label>
-  <input type="text" name="longitude"><br>
-  <label>Radius in metres</label>
-  <input type="text" name="x"><br>
-  <button>Search</button>
-</form>
+<h1>Search result</h1>
 
 
-<form action="/closest_shops" method="GET">
-  <h2>X closest shops</h2>
-  <label>Latitude</label>
-  <input type="text" name="latitude"><br>
-  <label>Longitude</label>
-  <input type="text" name="longitude"><br>
-  <label>X</label>
-  <input type="text" name="x"><br>
-  <button>Search</button>
-</form>
 
 <table>
   <thead>
@@ -60,7 +37,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Shop', new_shop_path %>

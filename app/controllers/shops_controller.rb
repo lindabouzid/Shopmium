@@ -61,6 +61,20 @@ class ShopsController < ApplicationController
     end
   end
 
+  def filter
+    @shops = []
+    Shop.all.each do |shop|
+      if shop.distance(params[:latitude], params[:longitude]) < params[:x].to_f
+        @shops << shop
+      end
+    end
+  end
+
+  def closest
+    @shops = Shop.all.sort { |a,b| a.distance(params[:latitude], params[:longitude]) <=> b.distance(params[:latitude], params[:longitude]) }.take(params[:x].to_i)
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shop
