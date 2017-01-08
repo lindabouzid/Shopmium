@@ -1,0 +1,35 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Chain</th>
+      <th>Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th>Country code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shops.each do |shop| %>
+      <tr>
+        <td><%= shop.chain %></td>
+        <td><%= shop.name %></td>
+        <td><%= shop.latitude %></td>
+        <td><%= shop.longitude %></td>
+        <td><%= shop.address %></td>
+        <td><%= shop.city %></td>
+        <td><%= shop.zip %></td>
+        <td><%= shop.phone %></td>
+        <td><%= shop.country_code %></td>
+        <td><div class="btn btn-shopmium"><%= link_to ' Show', shop,:class => "glyphicon glyphicon-eye-open" %></div></td>
+        <td><div class="btn btn-shopmium"><%= link_to ' Edit', edit_shop_path(shop),:class => "glyphicon glyphicon-pencil" %></div></td>
+        <td><div class="btn btn-primary"><%= link_to ' Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } ,:class => "glyphicon glyphicon-trash" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -4,6 +4,7 @@ class ShopsController < ApplicationController
   # GET /shops
   # GET /shops.json
   def index
+    @list_menu = true
     @shops = Shop.all
   end
 
@@ -14,6 +15,7 @@ class ShopsController < ApplicationController
 
   # GET /shops/new
   def new
+    @new_menu = true
     @shop = Shop.new
   end
 

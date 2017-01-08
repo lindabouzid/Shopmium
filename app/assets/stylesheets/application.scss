@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ .navbar-brand{
+    margin-top: auto;
+    margin-bottom: auto
+ }
+
+ .container-fluid{
+ 	background-color: white;
+ }
+ 
+
+ .btn-shopmium{
+ 	background-color: #f01f74;
+ 	color: white;
+ }
+
+ .panel, table{
+ 	margin: 10px;
+ }
+
+ .glyphicon{
+ 	color: white;
+ }
+ 
