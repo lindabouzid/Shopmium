@@ -1,3 +1,4 @@
+<div class="bloc">
 <table class="table">
   <thead>
     <tr>
@@ -26,10 +27,11 @@
         <td><%= shop.zip %></td>
         <td><%= shop.phone %></td>
         <td><%= shop.country_code %></td>
-        <td><div class="btn btn-shopmium"><%= link_to ' Show', shop,:class => "glyphicon glyphicon-eye-open" %></div></td>
+        <td><div class="btn btn-default"><%= link_to ' Show', shop,:class => "glyphicon glyphicon-eye-open", :style => style="color: black" %></div></td>
         <td><div class="btn btn-shopmium"><%= link_to ' Edit', edit_shop_path(shop),:class => "glyphicon glyphicon-pencil" %></div></td>
         <td><div class="btn btn-primary"><%= link_to ' Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } ,:class => "glyphicon glyphicon-trash" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>

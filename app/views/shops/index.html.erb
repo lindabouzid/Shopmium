@@ -6,18 +6,18 @@
     <div class="panel-heading">Shops in X radius</div>
     <div class="panel-body">
       <div class="form-group">
-        <label>Latitude</label>
+        <label> Latitude: </label>
         <input class="form-control"  type="text" name="latitude"><br>
       </div>
       <div class="form-group">
-        <label>Longitude</label>
+        <label> Longitude: </label>
         <input  class="form-control" type="text" name="longitude"><br>
       </div>
       <div class="form-group">
-        <label>Radius in metres</label>
+        <label> Radius in metres: </label>
         <input class="form-control"  type="text" name="x"><br>
       </div>
-      <button class="btn btn-default">Search</button>
+      <button class="btn btn-shopmium">Search</button>
     </div>
   </div>
 </form>
@@ -28,24 +28,24 @@
     <div class="panel-heading">X closest shops</div>
     <div class="panel-body">
       <div class="form-group">
-        <label>Latitude</label>
+        <label> Latitude: </label>
         <input class="form-control"  type="text" name="latitude"><br>
       </div>
       <div class="form-group">
-        <label>Longitude</label>
+        <label> Longitude: </label>
         <input  class="form-control" type="text" name="longitude"><br>
       </div>
       <div class="form-group">
-        <label>X</label>
+        <label> X: </label>
         <input class="form-control"  type="text" name="x"><br>
       </div>
-      <button class="btn btn-default">Search</button>
+      <button class="btn btn-shopmium">Search</button>
     </div>
   </div>
 </form>
 
 
-<div class="btn btn-shopmium" style= "float: right"><%= link_to ' New Shop', new_shop_path, class: "glyphicon glyphicon-shopping-cart" %></div>
+<div class="btn btn-shopmium" style= "float: right; margin-right: 10px"><%= link_to ' New Shop', new_shop_path, class: "glyphicon glyphicon-shopping-cart" %></div>
 
 <%= render 'list', shop: @shop %>
 

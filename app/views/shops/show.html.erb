@@ -1,5 +1,7 @@
-<p id="notice"><%= notice %></p>
+<div class="btn btn-shopmium" style="float: right; margin-right: 10px"><%= link_to 'Back', shops_path, :class => "glyphicon glyphicon-circle-arrow-left" %></div>
+
 <div class="list-group">
+<div class="bloc">
 <p>
   <strong>Chain:</strong>
   <%= @shop.chain %>
@@ -45,5 +47,6 @@
   <%= @shop.country_code %>
 </p>
 </div>
-<%= link_to 'Edit', edit_shop_path(@shop) %> |
-<%= link_to 'Back', shops_path %>
+</div>
+<div class="btn btn-shopmium" style="float: left; margin-left: 10px"><%= link_to 'Edit', edit_shop_path(@shop), :class => "glyphicon glyphicon-pencil" %></div>
+
